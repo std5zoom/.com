@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miss Andrena's Std 5 Class</title>
+    <link rel="icon" href="school-clipart-school-clipart-1.png">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&family=Sansita+Swashed:wght@500&family=Secular+One&display=swap" rel="stylesheet">
+    <style>
+
+        body {
+            padding:0;
+            margin:0;
+            background-color:rgb(48, 48, 48);
+            color:white;
+            overflow-x: hidden;
+        }
+
+        .title {
+            text-align:center;
+            font-family: 'Sansita Swashed', cursive;
+            font-size:45px;
+            padding:52px 52px 40px 52px;
+            position: relative;
+        }
+
+        .list {
+            display:grid;
+            width:100%;
+            align-items: center;
+            justify-items: center;
+            padding:20px 0 55px 0;
+        }
+
+        .list a {
+            padding:15px;
+            margin:10px;
+            border-radius:10px;
+            color:white;
+            background-color:transparent;
+            border:3px solid rgb(0, 102, 255);
+            font-family: 'Secular One', sans-serif;
+            text-align: center;
+            font-size: 23px;
+            width:150px;
+            transition:0.2s;
+            text-decoration:none;
+        }
+
+        .list a:hover {
+            width:165px;
+            background-color:rgb(0, 102, 255);
+            font-size:28px ;
+            transition:0.2s;
+        }
+
+        .selector {
+            text-align:center;
+            display:grid;
+            justify-content: center;
+            background:rgb(240, 240, 240);
+            border-radius:15px;
+            margin:300px 50px 30px 50px;
+            padding:20px;
+            color:rgb(41, 41, 41);
+            position: relative;
+        }
+
+        .t2 {
+            color:rgb(41, 41, 41);
+        }
+
+        .selector p {
+            font-family: 'Lobster', cursive;
+            font-size:40px;
+            color:rgb(41, 41, 41);
+        }
+
+        #gen {
+            background: rgb(0, 102, 255);
+            border-radius: 10px;
+            color:rgb(240, 240, 240);
+            padding:5px;
+            font-family: 'Secular One', sans-serif;
+            font-size:23px;
+            cursor: pointer;
+            user-select: none;
+            transition:0.2s;
+            
+        }
+
+        #gen:hover {
+            transition:0.2s;
+            background-color: rgb(0, 86, 214);
+        }
+
+        .note {
+            position:absolute;
+            top:350px;
+            left:-600px;
+            width:25%;
+            animation:note 20s;
+            animation-delay: 3s;
+        }
+
+        @keyframes note {
+            0% {left:-3000px}
+            20% {left:-10px}
+            40% {left:-10px}
+            60% {left:-10px}
+            80% {left:-10px}
+            85% {left:-10px}
+            90% {left:-10px}
+            95% {left:-10px}
+            100% {left:-600px}
+        }
+
+        #zoom {
+            color:rgb(0, 102, 255);
+        }
+
+        .prayers {
+            display:block;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: rgb(65, 65, 65);
+            border-radius:20px;
+            margin:150px 50px 50px 50px;
+        }
+
+        .prayers img {
+            margin:40px 0;
+            width:55%;
+            border-radius: 10px;
+            transition: 0.2s;
+            box-shadow: 5px 10px 8px rgb(41, 41, 41);
+        }
+
+        .prayers p {
+            font-family: 'Sansita Swashed', cursive;
+            font-size:45px;
+            padding: 45px 0 10px 0;
+            margin:0;
+        }
+
+        .prayers #small {
+            width:45%;
+        }
+
+        .prayers #small2 {
+            width:35%;
+        }
+
+        .prayers #small3 {
+            width:33%;
+        }
+
+        #noboxs {
+            box-shadow: none;
+        }
+
+        .dec {
+            position: absolute;
+            top:-80px;
+            width:100%;
+            text-align: center;
+        }
+
+        .dec img {
+            width:50%;
+        }
+
+        .mc {
+            position:absolute;
+            top:-154px;
+            right:150px;
+        }
+
+        .mc2 {
+            position: absolute;
+            top:44px;
+            transform: rotate(-30deg);
+            left:6px;
+        }
+
+        #copyright {
+            width:100%;
+            text-align: center;
+            padding:20px 0;
+            font-family: Helvetica, sans-serif;
+            font-size: 13px;
+            color:rgb(128, 128, 128);
+            margin-top:35px;
+        }
+
+        @media only screen and (min-width: 1210px) {
+
+        .prayers #small:hover {
+            width:48%;
+        }
+
+        .prayers #small2:hover {
+            width:38%;
+        }
+
+        .prayers #small3:hover {
+            width:35%;
+        }
+
+        .prayers img:hover {
+            width: 58%;
+            transition: 0.2s;
+        }
+        }
+
+        @media only screen and (max-width: 1200px) {
+            .note {
+            position:absolute;
+            top:0;
+            left:0;
+            background:transparent;
+            color:transparent;
+            width:0;
+            padding:0;
+            font-size:0px;
+            animation:note 1.5s forwards;
+            animation-delay: 0s;
+            visibility: hidden;
+        }
+
+        @keyframes note {
+            from{left:0}
+            to{left:0}
+        }
+        }
+
+        @media only screen and (max-width: 599px) {
+            .list a {
+                width:160px;
+            }
+
+            .note {
+            position:absolute;
+            top:0;
+            left:0;
+            width:0;
+            height:0;
+            animation:note 1.5s forwards;
+            animation-delay: 0s;
+            visibility: hidden;
+            }
+
+            .note img{
+            width:0;
+            height:0;
+            visibility: hidden;
+            }
+            
+            .t2 {
+                font-size:34px;
+                padding:10px;
+            }
+
+            .prayers p {
+                font-size: 34px;
+            }
+
+            .selector {
+                margin:30px 20px;
+            }
+
+            .prayers {
+                margin:30px 5px;
+            }
+
+            .prayers img {
+                width:100%;
+                margin:20px 0;
+            }
+
+            .prayers img:hover {
+                width:100%
+            }
+
+            .prayers #small {
+                width:100%;
+            }
+
+            .prayers #small2 {
+                width:100%;
+            }
+
+            .prayers #small3 {
+                width:100%;
+            }
+
+            .dec {
+            position: absolute;
+            top:-40px;
+            width:100%;
+            text-align: center;
+        }
+
+        .dec img {
+            width:100%;
+        }
+
+        .mc {
+            position:absolute;
+            top:-89px;
+            right:-6px;
+        }
+
+        .mc img {
+            width:88px;
+        }
+
+        .mc2 {
+            position: absolute;
+            top:16px;
+            transform: rotate(-30deg);
+            left:6px;
+            z-index: 5;
+        }
+
+        .mc2 img {
+            width:0;
+        }
+        }
+
+        @media only screen and (min-width: 600px) and (max-width: 1100px) {
+            .prayers {
+                margin:150px 15px 30px 15px;
+            }
+
+            .prayers img {
+                width:95%;
+                margin:20px 0;
+            }
+
+            .prayers img:hover {
+                width:95%
+            }
+
+            .prayers #small {
+                width:95%;
+            }
+
+            .prayers #small2 {
+                width:95%;
+            }
+
+            .prayers #small3 {
+                width:95%;
+            }
+
+            .dec {
+            position: absolute;
+            top:-80px;
+            width:100%;
+            text-align: center;
+        }
+
+        .dec img {
+            width:80%;
+        }
+
+        .mc {
+            position:absolute;
+            top:-154px;
+            right:0;
+        }
+
+        .mc2 {
+            position: absolute;
+            top:37px;
+            transform: rotate(-30deg);
+            left:6px;
+            z-index: 5;
+        }
+
+        .mc2 img {
+            width:170px;
+        }
+
+        .selector {
+            text-align:center;
+            display:grid;
+            justify-content: center;
+            background:rgb(240, 240, 240);
+            border-radius:15px;
+            margin:30px 50px 30px 50px;
+            padding:20px;
+            color:rgb(41, 41, 41);
+            position: relative;
+        }
+        }
+
+
+
+    </style>
+</head>
+<body>
+   <div class="main"> 
+    <div class="dec"><img src="test.gif"></div>   
+    <div class="title">Miss Andrena's Zoom Classes</div>
+    <div class="list">
+        <a target="blank" href="https://us02web.zoom.us/j/8046905202" title="Join Monday's Zoom Class">Monday</a>
+        <a target="blank" href="https://us02web.zoom.us/j/8046905202" title="Join Tuesday's Zoom Class">Tuesday</a>
+        <a target="blank" href="https://us02web.zoom.us/j/8046905202" title="Join Wednesday's Zoom Class">Wednesday</a>
+        <a target="blank" href="https://us02web.zoom.us/j/8046905202" title="Join Thursday's Zoom Class">Thursday</a>
+        <a target="blank" href="https://us02web.zoom.us/j/8046905202" title="Join Friday's Zoom Class">Friday</a>
+    </div> 
+    <div class="selector">
+        <div class="title t2">Who's praying today?</div>
+        <p></p>
+        <div id="gen" onclick="gentext();">Generate Name</div>
+        <div class="mc"><img src="mc.png" width="150px"></div>
+        <div class="mc2"><img src="mc2.png" width="200px"></div>
+    </div>
+    <div class="note"><img src="newnote.png"></div>
+    <div class="prayers">
+        <p>National Anthem & Pledge</p>
+        <img id="small3" src="p5.png"><br>
+        <img id="small2" src="p5.bmp"><br>
+        <p>Prayers</p>
+        <img id="small" src="p4.png">
+        <img src="p1.png">
+        <img src="p2.png">
+        <img id="noboxs" src="p3.png">
+    </div>
+    <div id="copyright">© 2020 Jediah R.</div>
+   </div>
+   <script>
+       function gentext() {
+           var word=['Judah','Aleah','Nasire','Daniella','Ronaldo A.','Ronaldo F.','Shanice','Salene','Amy','Angelina','Samira','Kathlyn','Shay-ann','Victoria','Javon','Rihanna','Devyannie','Triston-Lee','Jameel','Jordin','Alleyna','Gabriel','Raj','Ashminy','Arianna',];
+           var para=document.querySelector('p');
+           para.innerHTML=word[Math.floor(Math.random()*word.length)];
+       }
+   </script>  
+</body>
+</html>
